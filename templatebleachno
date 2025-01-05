@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/inter/v8/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url(https://fonts.gstatic.com/s/inter/v8/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotomono/v13/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Xvq_ROW4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Hind';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hind/v15/5aU19_a8oxmIfMJaERySjQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Hind';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/hind/v15/5aU19_a8oxmIfLZcERySjQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#magnus {width: 700px; background-color: #1e1e1e; border: solid 1px rgba(130,130,130,.1); margin: 35px auto; position: relative;padding: 40px; box-sizing: border-box; color: #ddd;display: grid; grid-template-rows: auto auto auto;}
+#magnus br {display:none;}
+
+#magnus .cont {text-align: justify; padding: 50px; font: 200 14px Hind; line-height: 25px;border: solid 1px rgba(130,130,130,.1); border-top: 0px; border-bottom: 0px;}
+#magnus .cont b {color:var(--accent1);}
+#magnus .cont br, #magnus .histórico label div br {display:block;}
+
+#magnus .barra {display: flex; align-items: center; text-transform: uppercase; position: relative; overflow: hidden; grid-row: 1; background: rgba(35,35,35,.4); padding: 10px; box-sizing: border-box;gap:10px;border: solid 1px rgba(130,130,130,.1);border-bottom:0px;justify-content: space-between;}
+#magnus .barra i {display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; padding: 5px; background: var(--accent1); border-radius: 10px; font-size: 1rem; border: solid 1px rgba(130,130,130,.15); color: #fff;}
+#magnus .barra h1 { font: 600 10px Roboto Mono; text-transform: uppercase; margin: 0px;display: flex; align-items: center; gap: 10px;}
+#magnus .barra numeropost { font: 600 10px Roboto Mono; text-transform: uppercase; }
+
+#magnus .topo { width: 100%; height: 220px; border: solid 1px rgba(130,130,130,.1); display: flex; align-items: center; justify-content: center; }
+#magnus .topo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.4) brightness(1.2); mix-blend-mode: multiply; opacity: 0.6; }
+#magnus .topo i {position: absolute; font-size: 2rem; width: 50px; height: 50px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; padding: 20px; border-radius: 100%;}
+
+#magnus .histórico { width: 100%; height: 220px; border: solid 1px rgba(130,130,130,.1); display: flex; align-items: flex-start; justify-content: center; flex-direction: column;position:relative;}
+
+#magnus .histórico label { height: 100%; }
+#magnus .histórico input {display:none;}
+
+#magnus .histórico label i { display: flex; align-items: center; justify-content: flex-start; gap: 10px; text-transform: uppercase; width: 200px; border-right: solid 1px rgba(130,130,130,.1); border-bottom: solid 1px rgba(130,130,130,.1); position: relative; height: 100%; background: rgba(35,35,35,.4);cursor: pointer;padding-left: 20px; box-sizing: border-box;}
+#magnus .histórico label input:checked ~ i {background: linear-gradient(45deg, var(--accent1) -800%, transparent);}
+#magnus .histórico label i:after {content:attr(data-title);   font: 900 10px Inter;}
+
+#magnus .histórico label div {position: absolute; right: 0; top: 0; height: 100%; background: rgba(35,35,35,.4); padding: 20px; box-sizing: border-box; width: calc(100% - 200px); opacity: 0; z-index: 1;overflow:auto;font:200 13px Hind;}
+#magnus .histórico label input:checked ~ div {opacity:1;z-index:2}
+
+-------
+
+#magnus .histórico2 { width: 100%; height: 220px; border: solid 1px rgba(130,130,130,.1); display: flex; align-items: flex-start; justify-content: center; flex-direction: column;position:relative;}
+
+#magnus .histórico2 label { height: 100%; }
+#magnus .histórico2 input {display:none;}
+
+#magnus .histórico2 label i { display: flex; align-items: center; justify-content: flex-start; gap: 10px; text-transform: uppercase; width: 200px; border-right: solid 1px rgba(130,130,130,.1); border-bottom: solid 1px rgba(130,130,130,.1); position: relative; height: 100%; background: rgba(35,35,35,.4);cursor: pointer;padding-left: 20px; box-sizing: border-box;}
+#magnus .histórico2 label input:checked ~ i {background: linear-gradient(45deg, var(--accent1) -800%, transparent);}
+#magnus .histórico2 label i:after {content:attr(data-title);   font: 900 10px Inter;}
+
+#magnus .histórico2 label div {position: absolute; right: 0; top: 0; height: 100%; background: rgba(35,35,35,.4); padding: 20px; box-sizing: border-box; width: calc(100% - 200px); opacity: 0; z-index: 1;overflow:hiden;font:200 13px Hind;}
+#magnus .histórico2 label input:checked ~ div {opacity:1;z-index:2}
+
+div[data-title="Dados"]:after { content: "\f577"; font-family: "Font Awesome 5 Pro"; font-size: 5rem; position: absolute; bottom: -17px; transform: rotate(-29deg); right: -13px; color: var(--accent2); }
+div[data-title="Status"]:after { content: "\f5d4"; font-family: "Font Awesome 5 Pro"; font-size: 5rem; position: absolute; bottom: -7px; transform: rotate(-30deg); right: -5px; color: var(--accent2); }
+div[data-title="Relacionamentos"]:after { content: "\f0c0"; font-family: "Font Awesome 5 Pro"; font-size: 5rem; position: absolute; bottom: -15px; transform: rotate(-10deg); right: -5px; color: var(--accent2); }
+#magnus .histórico label div:before {content:attr(data-title);display:block;font:800 15px inter;Text-transform:uppercase;margin-bottom:10px;}
+
+#magnus video { width: 100%; height: 50px;background: rgba(35,35,35,.4);border: solid 1px rgba(130,130,130,.1); }
+#magnus video::-webkit-media-controls-timeline, #magnus video::-webkit-media-controls-fullscreen-button {display:none;}
+#magnus video::-webkit-media-controls-panel {background: rgb(35 35 35 / 100%);}
+#magnus:after{
+    content: "AURUM IS THE WAY";
+    color: #fff;
+    font: 600 8px Hind;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -15px;
+    width: -webkit-fill-available;
+    text-align: center;
+}
